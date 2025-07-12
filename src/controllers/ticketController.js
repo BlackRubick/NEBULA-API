@@ -14,34 +14,73 @@ const generateTicketNumber = () => {
 // Obtener lista de boletos con paginación
 const getTickets = async (req, res, next) => {
   try {
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 10;
+    const page = Math.max(1, parseInt(req.query.page) || 1);
+    const limit = Math.max(1, Math.min(100, parseInt(req.query.limit) || 10));
     const offset = (page - 1) * limit;
     const search = req.query.search || '';
     const status = req.query.status || '';
     const eventId = req.query.eventId || '';
 
+    console.log('🔍 getTickets called with params:', { page, limit, offset, search, status, eventId });
+
     // Construir query con filtros
     let whereClause = 'WHERE 1=1';
     const params = [];
 
-    if (search) {
+    if (search && search.trim()) {
       whereClause += ' AND (t.ticket_number LIKE ? OR t.buyer_name LIKE ? OR t.buyer_email LIKE ? OR e.name LIKE ?)';
-      const searchParam = `%${search}%`;
+      const searchParam = `%${search.trim()}%`;
       params.push(searchParam, searchParam, searchParam, searchParam);
     }
 
-    if (status) {
+    if (status && status.trim()) {
       whereClause += ' AND t.status = ?';
-      params.push(status);
+      params.push(status.trim());
     }
 
-    if (eventId) {
+    if (eventId && eventId.trim()) {
       whereClause += ' AND t.event_id = ?';
-      params.push(eventId);
+      params.push(eventId.trim());
     }
 
-    // Query principal con JOIN a events
+    console.log('📝 Where clause:', whereClause);
+    console.log('📋 Filter params:', params);
+
+    // Primero, vamos a obtener el conteo sin paginación para verificar
+    const countQuery = `
+      SELECT COUNT(*) as total
+      FROM tickets t
+      JOIN events e ON t.event_id = e.id
+      ${whereClause}
+    `;
+
+    console.log('🔢 Count query:', countQuery);
+    console.log('🔢 Count params:', params);
+
+    const countResult = await executeQuery(countQuery, params);
+    const total = countResult[0]?.total || 0;
+
+    console.log('📊 Total tickets found:', total);
+
+    // Si no hay tickets, devolver resultado vacío
+    if (total === 0) {
+      return res.json({
+        success: true,
+        data: [],
+        meta: {
+          pagination: {
+            page: 1,
+            limit,
+            total: 0,
+            totalPages: 0,
+            hasNext: false,
+            hasPrev: false
+          }
+        }
+      });
+    }
+
+    // Query principal con paginación
     const query = `
       SELECT 
         t.id,
@@ -63,24 +102,16 @@ const getTickets = async (req, res, next) => {
       JOIN events e ON t.event_id = e.id
       ${whereClause}
       ORDER BY t.created_at DESC
-      LIMIT ? OFFSET ?
+      LIMIT ${limit} OFFSET ${offset}
     `;
 
-    // Query para contar total
-    const countQuery = `
-      SELECT COUNT(*) as total
-      FROM tickets t
-      JOIN events e ON t.event_id = e.id
-      ${whereClause}
-    `;
+    console.log('🎫 Main query:', query);
+    console.log('🎫 Main params:', params);
 
-    const [tickets, countResult] = await Promise.all([
-      executeQuery(query, [...params, limit, offset]),
-      executeQuery(countQuery, params)
-    ]);
-
-    const total = countResult[0].total;
+    const tickets = await executeQuery(query, params);
     const totalPages = Math.ceil(total / limit);
+
+    console.log('✅ Tickets retrieved:', tickets.length);
 
     res.json({
       success: true,
@@ -97,6 +128,8 @@ const getTickets = async (req, res, next) => {
       }
     });
   } catch (error) {
+    console.error('❌ Error in getTickets:', error);
+    console.error('❌ Error stack:', error.stack);
     next(error);
   }
 };
