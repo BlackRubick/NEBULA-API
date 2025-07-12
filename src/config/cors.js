@@ -8,7 +8,9 @@ const corsOptions = {
       'http://localhost:5173',    // Vite dev server
       'http://localhost:4173',    // Vite preview
       'https://nebula-tickets.vercel.app',  // Producción (ajustar según tu dominio)
-      'https://nebula-app.com',   // Dominio personalizado
+      'https://nebula-app.com',
+      'https://3.15.186.124',  
+      
     ];
     
     // En desarrollo, permitir cualquier localhost

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ffd08c3-cc8c-476d-83f3-ed3f5bcd3398" name="Changes" comment="" />
+    <list default="true" id="2d481c92-7b1c-48a2-9ddc-856b38d2e539" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
   "associatedIndex": 8
 }]]></component>
-  <component name="ProjectId" id="2zlCApH2Hxj0G9cRsxNbHVm6wm1" />
+  <component name="ProjectId" id="2zlMUYDWsyqvhgZNP73s0vcjci3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -19,7 +20,6 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/blackrubick/Escritorio/nebula-api",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -34,16 +34,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2ffd08c3-cc8c-476d-83f3-ed3f5bcd3398" name="Changes" comment="" />
-      <created>1752296132624</created>
+      <changelist id="2d481c92-7b1c-48a2-9ddc-856b38d2e539" name="Changes" comment="" />
+      <created>1752301224547</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1752296132624</updated>
-      <workItem from="1752296134179" duration="26000" />
+      <updated>1752301224547</updated>
+      <workItem from="1752301226458" duration="2000" />
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
 </project>
