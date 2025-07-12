@@ -1,0 +1,295 @@
+2025-07-12 07:44 +00:00: 🚫 CORS blocked origin: http://3.15.186.124
+2025-07-12 07:44 +00:00: ❌ Error: Error: No permitido por política CORS
+    at origin (/home/ubuntu/NEBULA-API/src/config/cors.js:29:16)
+    at /home/ubuntu/NEBULA-API/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/home/ubuntu/NEBULA-API/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/home/ubuntu/NEBULA-API/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/index.js:328:13)
+    at /home/ubuntu/NEBULA-API/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/home/ubuntu/NEBULA-API/node_modules/helmet/index.cjs:537:6)
+2025-07-12 07:44 +00:00: 🚫 CORS blocked origin: http://3.15.186.124
+2025-07-12 07:44 +00:00: ❌ Error: Error: No permitido por política CORS
+    at origin (/home/ubuntu/NEBULA-API/src/config/cors.js:29:16)
+    at /home/ubuntu/NEBULA-API/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/home/ubuntu/NEBULA-API/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/home/ubuntu/NEBULA-API/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/index.js:328:13)
+    at /home/ubuntu/NEBULA-API/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/home/ubuntu/NEBULA-API/node_modules/helmet/index.cjs:537:6)
+2025-07-12 07:44 +00:00: 🚫 CORS blocked origin: http://3.15.186.124
+2025-07-12 07:44 +00:00: ❌ Error: Error: No permitido por política CORS
+    at origin (/home/ubuntu/NEBULA-API/src/config/cors.js:29:16)
+    at /home/ubuntu/NEBULA-API/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/home/ubuntu/NEBULA-API/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/home/ubuntu/NEBULA-API/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/index.js:328:13)
+    at /home/ubuntu/NEBULA-API/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/index.js:280:10)
+    at internalNext (/home/ubuntu/NEBULA-API/node_modules/helmet/index.cjs:537:6)
+2025-07-12 18:44 +00:00: ❌ Error ejecutando query: Error: Incorrect arguments to mysqld_stmt_execute
+    at PromisePool.execute (/home/ubuntu/NEBULA-API/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at executeQuery (/home/ubuntu/NEBULA-API/src/config/database.js:49:32)
+    at getTickets (/home/ubuntu/NEBULA-API/src/controllers/ticketController.js:78:7)
+    at /home/ubuntu/NEBULA-API/src/middleware/errorHandler.js:113:21
+    at Layer.handle [as handle_request] (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/route.js:149:13)
+    at authenticateToken (/home/ubuntu/NEBULA-API/src/middleware/auth.js:41:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ER_WRONG_ARGUMENTS',
+  errno: 1210,
+  sql: '\n' +
+    '      SELECT \n' +
+    '        t.id,\n' +
+    '        t.ticket_number,\n' +
+    '        t.buyer_name,\n' +
+    '        t.buyer_email,\n' +
+    '        t.buyer_phone,\n' +
+    '        t.price,\n' +
+    '        t.status,\n' +
+    '        t.qr_code,\n' +
+    '        t.used_at,\n' +
+    '        t.created_at,\n' +
+    '        t.updated_at,\n' +
+    '        e.id as event_id,\n' +
+    '        e.name as event_name,\n' +
+    '        e.location as event_location,\n' +
+    '        e.event_date\n' +
+    '      FROM tickets t\n' +
+    '      JOIN events e ON t.event_id = e.id\n' +
+    '      WHERE 1=1\n' +
+    '      ORDER BY t.created_at DESC\n' +
+    '      LIMIT ? OFFSET ?\n' +
+    '    ',
+  sqlState: 'HY000',
+  sqlMessage: 'Incorrect arguments to mysqld_stmt_execute'
+}
+2025-07-12 18:44 +00:00: ❌ Error: Error: Incorrect arguments to mysqld_stmt_execute
+    at PromisePool.execute (/home/ubuntu/NEBULA-API/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at executeQuery (/home/ubuntu/NEBULA-API/src/config/database.js:49:32)
+    at getTickets (/home/ubuntu/NEBULA-API/src/controllers/ticketController.js:78:7)
+    at /home/ubuntu/NEBULA-API/src/middleware/errorHandler.js:113:21
+    at Layer.handle [as handle_request] (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/route.js:149:13)
+    at authenticateToken (/home/ubuntu/NEBULA-API/src/middleware/auth.js:41:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ER_WRONG_ARGUMENTS',
+  errno: 1210,
+  sql: '\n' +
+    '      SELECT \n' +
+    '        t.id,\n' +
+    '        t.ticket_number,\n' +
+    '        t.buyer_name,\n' +
+    '        t.buyer_email,\n' +
+    '        t.buyer_phone,\n' +
+    '        t.price,\n' +
+    '        t.status,\n' +
+    '        t.qr_code,\n' +
+    '        t.used_at,\n' +
+    '        t.created_at,\n' +
+    '        t.updated_at,\n' +
+    '        e.id as event_id,\n' +
+    '        e.name as event_name,\n' +
+    '        e.location as event_location,\n' +
+    '        e.event_date\n' +
+    '      FROM tickets t\n' +
+    '      JOIN events e ON t.event_id = e.id\n' +
+    '      WHERE 1=1\n' +
+    '      ORDER BY t.created_at DESC\n' +
+    '      LIMIT ? OFFSET ?\n' +
+    '    ',
+  sqlState: 'HY000',
+  sqlMessage: 'Incorrect arguments to mysqld_stmt_execute'
+}
+2025-07-12 18:44 +00:00: ❌ Error ejecutando query: Error: Incorrect arguments to mysqld_stmt_execute
+    at PromisePool.execute (/home/ubuntu/NEBULA-API/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at executeQuery (/home/ubuntu/NEBULA-API/src/config/database.js:49:32)
+    at getTickets (/home/ubuntu/NEBULA-API/src/controllers/ticketController.js:78:7)
+    at /home/ubuntu/NEBULA-API/src/middleware/errorHandler.js:113:21
+    at Layer.handle [as handle_request] (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/route.js:149:13)
+    at authenticateToken (/home/ubuntu/NEBULA-API/src/middleware/auth.js:41:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ER_WRONG_ARGUMENTS',
+  errno: 1210,
+  sql: '\n' +
+    '      SELECT \n' +
+    '        t.id,\n' +
+    '        t.ticket_number,\n' +
+    '        t.buyer_name,\n' +
+    '        t.buyer_email,\n' +
+    '        t.buyer_phone,\n' +
+    '        t.price,\n' +
+    '        t.status,\n' +
+    '        t.qr_code,\n' +
+    '        t.used_at,\n' +
+    '        t.created_at,\n' +
+    '        t.updated_at,\n' +
+    '        e.id as event_id,\n' +
+    '        e.name as event_name,\n' +
+    '        e.location as event_location,\n' +
+    '        e.event_date\n' +
+    '      FROM tickets t\n' +
+    '      JOIN events e ON t.event_id = e.id\n' +
+    '      WHERE 1=1\n' +
+    '      ORDER BY t.created_at DESC\n' +
+    '      LIMIT ? OFFSET ?\n' +
+    '    ',
+  sqlState: 'HY000',
+  sqlMessage: 'Incorrect arguments to mysqld_stmt_execute'
+}
+2025-07-12 18:44 +00:00: ❌ Error: Error: Incorrect arguments to mysqld_stmt_execute
+    at PromisePool.execute (/home/ubuntu/NEBULA-API/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at executeQuery (/home/ubuntu/NEBULA-API/src/config/database.js:49:32)
+    at getTickets (/home/ubuntu/NEBULA-API/src/controllers/ticketController.js:78:7)
+    at /home/ubuntu/NEBULA-API/src/middleware/errorHandler.js:113:21
+    at Layer.handle [as handle_request] (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/route.js:149:13)
+    at authenticateToken (/home/ubuntu/NEBULA-API/src/middleware/auth.js:41:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ER_WRONG_ARGUMENTS',
+  errno: 1210,
+  sql: '\n' +
+    '      SELECT \n' +
+    '        t.id,\n' +
+    '        t.ticket_number,\n' +
+    '        t.buyer_name,\n' +
+    '        t.buyer_email,\n' +
+    '        t.buyer_phone,\n' +
+    '        t.price,\n' +
+    '        t.status,\n' +
+    '        t.qr_code,\n' +
+    '        t.used_at,\n' +
+    '        t.created_at,\n' +
+    '        t.updated_at,\n' +
+    '        e.id as event_id,\n' +
+    '        e.name as event_name,\n' +
+    '        e.location as event_location,\n' +
+    '        e.event_date\n' +
+    '      FROM tickets t\n' +
+    '      JOIN events e ON t.event_id = e.id\n' +
+    '      WHERE 1=1\n' +
+    '      ORDER BY t.created_at DESC\n' +
+    '      LIMIT ? OFFSET ?\n' +
+    '    ',
+  sqlState: 'HY000',
+  sqlMessage: 'Incorrect arguments to mysqld_stmt_execute'
+}
+2025-07-12 18:49 +00:00: ❌ Error ejecutando query: Error: Incorrect arguments to mysqld_stmt_execute
+    at PromisePool.execute (/home/ubuntu/NEBULA-API/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at executeQuery (/home/ubuntu/NEBULA-API/src/config/database.js:49:32)
+    at getTickets (/home/ubuntu/NEBULA-API/src/controllers/ticketController.js:86:7)
+    at /home/ubuntu/NEBULA-API/src/middleware/errorHandler.js:113:21
+    at Layer.handle [as handle_request] (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/route.js:149:13)
+    at authenticateToken (/home/ubuntu/NEBULA-API/src/middleware/auth.js:41:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ER_WRONG_ARGUMENTS',
+  errno: 1210,
+  sql: '\n' +
+    '      SELECT \n' +
+    '        t.id,\n' +
+    '        t.ticket_number,\n' +
+    '        t.buyer_name,\n' +
+    '        t.buyer_email,\n' +
+    '        t.buyer_phone,\n' +
+    '        t.price,\n' +
+    '        t.status,\n' +
+    '        t.qr_code,\n' +
+    '        t.used_at,\n' +
+    '        t.created_at,\n' +
+    '        t.updated_at,\n' +
+    '        e.id as event_id,\n' +
+    '        e.name as event_name,\n' +
+    '        e.location as event_location,\n' +
+    '        e.event_date\n' +
+    '      FROM tickets t\n' +
+    '      JOIN events e ON t.event_id = e.id\n' +
+    '      WHERE 1=1\n' +
+    '      ORDER BY t.created_at DESC\n' +
+    '      LIMIT ? OFFSET ?\n' +
+    '    ',
+  sqlState: 'HY000',
+  sqlMessage: 'Incorrect arguments to mysqld_stmt_execute'
+}
+2025-07-12 18:49 +00:00: Error in getTickets: Error: Incorrect arguments to mysqld_stmt_execute
+    at PromisePool.execute (/home/ubuntu/NEBULA-API/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at executeQuery (/home/ubuntu/NEBULA-API/src/config/database.js:49:32)
+    at getTickets (/home/ubuntu/NEBULA-API/src/controllers/ticketController.js:86:7)
+    at /home/ubuntu/NEBULA-API/src/middleware/errorHandler.js:113:21
+    at Layer.handle [as handle_request] (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/route.js:149:13)
+    at authenticateToken (/home/ubuntu/NEBULA-API/src/middleware/auth.js:41:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ER_WRONG_ARGUMENTS',
+  errno: 1210,
+  sql: '\n' +
+    '      SELECT \n' +
+    '        t.id,\n' +
+    '        t.ticket_number,\n' +
+    '        t.buyer_name,\n' +
+    '        t.buyer_email,\n' +
+    '        t.buyer_phone,\n' +
+    '        t.price,\n' +
+    '        t.status,\n' +
+    '        t.qr_code,\n' +
+    '        t.used_at,\n' +
+    '        t.created_at,\n' +
+    '        t.updated_at,\n' +
+    '        e.id as event_id,\n' +
+    '        e.name as event_name,\n' +
+    '        e.location as event_location,\n' +
+    '        e.event_date\n' +
+    '      FROM tickets t\n' +
+    '      JOIN events e ON t.event_id = e.id\n' +
+    '      WHERE 1=1\n' +
+    '      ORDER BY t.created_at DESC\n' +
+    '      LIMIT ? OFFSET ?\n' +
+    '    ',
+  sqlState: 'HY000',
+  sqlMessage: 'Incorrect arguments to mysqld_stmt_execute'
+}
+2025-07-12 18:49 +00:00: ❌ Error: Error: Incorrect arguments to mysqld_stmt_execute
+    at PromisePool.execute (/home/ubuntu/NEBULA-API/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at executeQuery (/home/ubuntu/NEBULA-API/src/config/database.js:49:32)
+    at getTickets (/home/ubuntu/NEBULA-API/src/controllers/ticketController.js:86:7)
+    at /home/ubuntu/NEBULA-API/src/middleware/errorHandler.js:113:21
+    at Layer.handle [as handle_request] (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/NEBULA-API/node_modules/express/lib/router/route.js:149:13)
+    at authenticateToken (/home/ubuntu/NEBULA-API/src/middleware/auth.js:41:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ER_WRONG_ARGUMENTS',
+  errno: 1210,
+  sql: '\n' +
+    '      SELECT \n' +
+    '        t.id,\n' +
+    '        t.ticket_number,\n' +
+    '        t.buyer_name,\n' +
+    '        t.buyer_email,\n' +
+    '        t.buyer_phone,\n' +
+    '        t.price,\n' +
+    '        t.status,\n' +
+    '        t.qr_code,\n' +
+    '        t.used_at,\n' +
+    '        t.created_at,\n' +
+    '        t.updated_at,\n' +
+    '        e.id as event_id,\n' +
+    '        e.name as event_name,\n' +
+    '        e.location as event_location,\n' +
+    '        e.event_date\n' +
+    '      FROM tickets t\n' +
+    '      JOIN events e ON t.event_id = e.id\n' +
+    '      WHERE 1=1\n' +
+    '      ORDER BY t.created_at DESC\n' +
+    '      LIMIT ? OFFSET ?\n' +
+    '    ',
+  sqlState: 'HY000',
+  sqlMessage: 'Incorrect arguments to mysqld_stmt_execute'
+}

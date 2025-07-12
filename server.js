@@ -11,15 +11,9 @@ async function startServer() {
     console.log('✅ Conexión a la base de datos establecida');
 
     // Iniciar servidor
-    app.listen(PORT, () => {
-      console.log(`🚀 Servidor corriendo en puerto ${PORT}`);
-      console.log(`📖 API disponible en: http://localhost:${PORT}/api`);
-      console.log(`🏥 Health check: http://localhost:${PORT}/api/health`);
-      
-      if (process.env.NODE_ENV === 'development') {
-        console.log('🔧 Modo desarrollo activado');
-      }
-    });
+    app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Servidor corriendo en puerto ${PORT}`);
+});
   } catch (error) {
     console.error('❌ Error al iniciar el servidor:', error);
     process.exit(1);

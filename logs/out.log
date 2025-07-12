@@ -15,3 +15,178 @@
 2025-07-12 07:00 +00:00: 🚀 Servidor corriendo en puerto 3001
 2025-07-12 07:00 +00:00: 📖 API disponible en: http://localhost:3001/api
 2025-07-12 07:00 +00:00: 🏥 Health check: http://localhost:3001/api/health
+2025-07-12 07:11 +00:00: 📦 Config DB: {
+  host: 'localhost',
+  port: '3306',
+  user: 'nebula_user',
+  password: 'cesar',
+  database: 'nebula_db',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  charset: 'utf8mb4',
+  timezone: '+00:00'
+}
+2025-07-12 07:11 +00:00: 🔗 Conectado a MySQL como ID: 15
+2025-07-12 07:11 +00:00: ✅ Conexión a la base de datos establecida
+2025-07-12 07:11 +00:00: 🚀 Servidor corriendo en puerto 3001
+2025-07-12 07:11 +00:00: 📖 API disponible en: http://localhost:3001/api
+2025-07-12 07:11 +00:00: 🏥 Health check: http://localhost:3001/api/health
+2025-07-12 07:19 +00:00: 📦 Config DB: {
+  host: 'localhost',
+  port: '3306',
+  user: 'nebula_user',
+  password: 'cesar',
+  database: 'nebula_db',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  charset: 'utf8mb4',
+  timezone: '+00:00'
+}
+2025-07-12 07:19 +00:00: 🔗 Conectado a MySQL como ID: 16
+2025-07-12 07:19 +00:00: ✅ Conexión a la base de datos establecida
+2025-07-12 07:19 +00:00: 🚀 Servidor corriendo en puerto 3001
+2025-07-12 07:19 +00:00: 📦 Config DB: {
+  host: 'localhost',
+  port: '3306',
+  user: 'nebula_user',
+  password: 'cesar',
+  database: 'nebula_db',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  charset: 'utf8mb4',
+  timezone: '+00:00'
+}
+2025-07-12 07:19 +00:00: 🔗 Conectado a MySQL como ID: 18
+2025-07-12 07:19 +00:00: ✅ Conexión a la base de datos establecida
+2025-07-12 07:19 +00:00: 🚀 Servidor corriendo en puerto 3001
+2025-07-12 07:28 +00:00: 127.0.0.1 - - [12/Jul/2025:07:28:46 +0000] "GET /api/health HTTP/1.1" 200 172 "-" "curl/8.5.0"
+2025-07-12 07:44 +00:00: 187.188.32.49 - - [12/Jul/2025:07:44:21 +0000] "GET /api/health HTTP/1.1" 200 172 "-" "curl/8.13.0"
+2025-07-12 07:47 +00:00: 📦 Config DB: {
+  host: 'localhost',
+  port: '3306',
+  user: 'nebula_user',
+  password: 'cesar',
+  database: 'nebula_db',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  charset: 'utf8mb4',
+  timezone: '+00:00'
+}
+2025-07-12 07:47 +00:00: 🔗 Conectado a MySQL como ID: 19
+2025-07-12 07:47 +00:00: ✅ Conexión a la base de datos establecida
+2025-07-12 07:47 +00:00: 🚀 Servidor corriendo en puerto 3001
+2025-07-12 07:47 +00:00: 187.188.32.49 - - [12/Jul/2025:07:47:39 +0000] "GET /api/health HTTP/1.1" 200 172 "http://3.15.186.124/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36"
+2025-07-12 07:47 +00:00: 187.188.32.49 - - [12/Jul/2025:07:47:54 +0000] "POST /api/auth/login HTTP/1.1" 200 618 "http://3.15.186.124/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36"
+2025-07-12 07:47 +00:00: 187.188.32.49 - - [12/Jul/2025:07:47:54 +0000] "GET /api/admin/statistics HTTP/1.1" 200 196 "http://3.15.186.124/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36"
+2025-07-12 07:52 +00:00: 187.188.32.49 - - [12/Jul/2025:07:52:40 +0000] "GET /api/health HTTP/1.1" 200 172 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 07:57 +00:00: 187.188.32.49 - - [12/Jul/2025:07:57:40 +0000] "GET /api/health HTTP/1.1" 200 172 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 08:02 +00:00: 187.188.32.49 - - [12/Jul/2025:08:02:40 +0000] "GET /api/health HTTP/1.1" 200 172 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 08:07 +00:00: 187.188.32.49 - - [12/Jul/2025:08:07:40 +0000] "GET /api/health HTTP/1.1" 200 172 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 11:44 +00:00: 98.80.4.49 - - [12/Jul/2025:11:44:37 +0000] "GET / HTTP/1.1" 404 79 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+2025-07-12 11:44 +00:00: 98.80.4.49 - - [12/Jul/2025:11:44:37 +0000] "GET / HTTP/1.1" 404 79 "-" "Mozilla/5.0 (Windows NT 6.2;en-US) AppleWebKit/537.32.36 (KHTML, live Gecko) Chrome/50.0.3060.72 Safari/537.32"
+2025-07-12 18:44 +00:00: 187.188.32.49 - - [12/Jul/2025:18:44:02 +0000] "GET /api/health HTTP/1.1" 200 172 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:44 +00:00: 187.188.32.49 - - [12/Jul/2025:18:44:02 +0000] "GET /api/tickets? HTTP/1.1" 500 89 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:44 +00:00: 187.188.32.49 - - [12/Jul/2025:18:44:18 +0000] "GET /api/health HTTP/1.1" 200 172 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:44 +00:00: 187.188.32.49 - - [12/Jul/2025:18:44:18 +0000] "GET /api/tickets? HTTP/1.1" 500 89 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:48 +00:00: 📦 Config DB: {
+  host: 'localhost',
+  port: '3306',
+  user: 'nebula_user',
+  password: 'cesar',
+  database: 'nebula_db',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  charset: 'utf8mb4',
+  timezone: '+00:00'
+}
+2025-07-12 18:48 +00:00: 🔗 Conectado a MySQL como ID: 27
+2025-07-12 18:48 +00:00: ✅ Conexión a la base de datos establecida
+2025-07-12 18:48 +00:00: 🚀 Servidor corriendo en puerto 3001
+2025-07-12 18:49 +00:00: 187.188.32.49 - - [12/Jul/2025:18:49:01 +0000] "GET /api/health HTTP/1.1" 200 172 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:49 +00:00: Query: 
+      SELECT 
+        t.id,
+        t.ticket_number,
+        t.buyer_name,
+        t.buyer_email,
+        t.buyer_phone,
+        t.price,
+        t.status,
+        t.qr_code,
+        t.used_at,
+        t.created_at,
+        t.updated_at,
+        e.id as event_id,
+        e.name as event_name,
+        e.location as event_location,
+        e.event_date
+      FROM tickets t
+      JOIN events e ON t.event_id = e.id
+      WHERE 1=1
+      ORDER BY t.created_at DESC
+      LIMIT ? OFFSET ?
+    
+2025-07-12 18:49 +00:00: Query params: [ 10, 0 ]
+2025-07-12 18:49 +00:00: Count params: []
+2025-07-12 18:49 +00:00: 187.188.32.49 - - [12/Jul/2025:18:49:01 +0000] "GET /api/tickets? HTTP/1.1" 500 89 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:51 +00:00: 📦 Config DB: {
+  host: 'localhost',
+  port: '3306',
+  user: 'nebula_user',
+  password: 'cesar',
+  database: 'nebula_db',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  charset: 'utf8mb4',
+  timezone: '+00:00'
+}
+2025-07-12 18:51 +00:00: 🔗 Conectado a MySQL como ID: 29
+2025-07-12 18:51 +00:00: ✅ Conexión a la base de datos establecida
+2025-07-12 18:51 +00:00: 🚀 Servidor corriendo en puerto 3001
+2025-07-12 18:51 +00:00: 🔍 getTickets called with params: { page: 1, limit: 10, offset: 0, search: '', status: '', eventId: '' }
+2025-07-12 18:51 +00:00: 📝 Where clause: WHERE 1=1
+2025-07-12 18:51 +00:00: 📋 Filter params: []
+2025-07-12 18:51 +00:00: 🔢 Count query: 
+      SELECT COUNT(*) as total
+      FROM tickets t
+      JOIN events e ON t.event_id = e.id
+      WHERE 1=1
+    
+2025-07-12 18:51 +00:00: 🔢 Count params: []
+2025-07-12 18:51 +00:00: 📊 Total tickets found: 0
+2025-07-12 18:51 +00:00: 187.188.32.49 - - [12/Jul/2025:18:51:41 +0000] "GET /api/tickets? HTTP/1.1" 200 127 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:51 +00:00: 187.188.32.49 - - [12/Jul/2025:18:51:41 +0000] "GET /api/health HTTP/1.1" 200 172 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:54 +00:00: 187.188.32.49 - - [12/Jul/2025:18:54:00 +0000] "GET /api/health HTTP/1.1" 200 172 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:54 +00:00: 187.188.32.49 - - [12/Jul/2025:18:54:00 +0000] "GET /api/admin/statistics HTTP/1.1" 304 - "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:54 +00:00: 187.188.32.49 - - [12/Jul/2025:18:54:12 +0000] "GET /api/health HTTP/1.1" 200 172 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:54 +00:00: 🔍 getTickets called with params: { page: 1, limit: 10, offset: 0, search: '', status: '', eventId: '' }
+2025-07-12 18:54 +00:00: 📝 Where clause: WHERE 1=1
+2025-07-12 18:54 +00:00: 📋 Filter params: []
+2025-07-12 18:54 +00:00: 🔢 Count query: 
+      SELECT COUNT(*) as total
+      FROM tickets t
+      JOIN events e ON t.event_id = e.id
+      WHERE 1=1
+    
+2025-07-12 18:54 +00:00: 🔢 Count params: []
+2025-07-12 18:54 +00:00: 📊 Total tickets found: 0
+2025-07-12 18:54 +00:00: 187.188.32.49 - - [12/Jul/2025:18:54:12 +0000] "GET /api/tickets? HTTP/1.1" 304 - "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:54 +00:00: 187.188.32.49 - - [12/Jul/2025:18:54:42 +0000] "GET /api/health HTTP/1.1" 200 172 "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-07-12 18:54 +00:00: 🔍 getTickets called with params: { page: 1, limit: 10, offset: 0, search: '', status: '', eventId: '' }
+2025-07-12 18:54 +00:00: 📝 Where clause: WHERE 1=1
+2025-07-12 18:54 +00:00: 📋 Filter params: []
+2025-07-12 18:54 +00:00: 🔢 Count query: 
+      SELECT COUNT(*) as total
+      FROM tickets t
+      JOIN events e ON t.event_id = e.id
+      WHERE 1=1
+    
+2025-07-12 18:54 +00:00: 🔢 Count params: []
+2025-07-12 18:54 +00:00: 📊 Total tickets found: 0
+2025-07-12 18:54 +00:00: 187.188.32.49 - - [12/Jul/2025:18:54:42 +0000] "GET /api/tickets? HTTP/1.1" 304 - "http://3.15.186.124/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
