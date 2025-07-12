@@ -9,8 +9,8 @@ const corsOptions = {
       'http://localhost:4173',    // Vite preview
       'https://nebula-tickets.vercel.app',  // Producción (ajustar según tu dominio)
       'https://nebula-app.com',
-      'https://3.15.186.124',  
-      
+  'http://3.15.186.124:3000',     
+  'https://3.15.186.124:3000',          
     ];
     
     // En desarrollo, permitir cualquier localhost
