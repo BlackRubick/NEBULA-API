@@ -7,10 +7,12 @@ const corsOptions = {
       'http://localhost:3000',    // React dev server
       'http://localhost:5173',    // Vite dev server
       'http://localhost:4173',    // Vite preview
-      'https://nebula-tickets.vercel.app',  // Producción (ajustar según tu dominio)
+      'http://3.15.186.124:3000', // Tu frontend en producción
+      'https://3.15.186.124:3000', // Tu frontend con HTTPS
+      'http://18.116.163.27:3001', // Tu API
+      'https://18.116.163.27:3001', // Tu API con HTTPS
+      'https://nebula-tickets.vercel.app',
       'https://nebula-app.com',
-  'http://3.15.186.124:3000',     
-  'https://3.15.186.124:3000',          
     ];
     
     // En desarrollo, permitir cualquier localhost
@@ -27,7 +29,7 @@ const corsOptions = {
       callback(new Error('No permitido por política CORS'));
     }
   },
-  credentials: true, // Permitir cookies/auth headers
+  credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: [
     'Origin',
@@ -39,7 +41,7 @@ const corsOptions = {
     'Pragma'
   ],
   exposedHeaders: ['X-Total-Count', 'X-Page-Count'],
-  maxAge: 86400 // Cache preflight requests por 24 horas
+  maxAge: 86400
 };
 
 module.exports = { corsOptions };

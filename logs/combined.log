@@ -1,0 +1,17 @@
+2025-07-12 07:00 +00:00: 📦 Config DB: {
+  host: 'localhost',
+  port: '3306',
+  user: 'nebula_user',
+  password: 'cesar',
+  database: 'nebula_db',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  charset: 'utf8mb4',
+  timezone: '+00:00'
+}
+2025-07-12 07:00 +00:00: 🔗 Conectado a MySQL como ID: 14
+2025-07-12 07:00 +00:00: ✅ Conexión a la base de datos establecida
+2025-07-12 07:00 +00:00: 🚀 Servidor corriendo en puerto 3001
+2025-07-12 07:00 +00:00: 📖 API disponible en: http://localhost:3001/api
+2025-07-12 07:00 +00:00: 🏥 Health check: http://localhost:3001/api/health
