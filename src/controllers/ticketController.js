@@ -1,8 +1,9 @@
+// src/controllers/ticketController.js - COMPLETO CON EMAILJS
+
 const { v4: uuidv4 } = require('uuid');
 const { executeQuery } = require('../config/database');
 const { createError } = require('../middleware/errorHandler');
-const { generateQRCode } = require('../services/qrService');
-const { sendTicketEmail } = require('../services/emailService');
+const { sendTicketEmail } = require('../services/emailJSService'); // 👈 EMAILJS
 
 // Generar número de boleto único
 const generateTicketNumber = () => {
@@ -46,7 +47,7 @@ const getTickets = async (req, res, next) => {
     console.log('📝 Where clause:', whereClause);
     console.log('📋 Filter params:', params);
 
-    // Primero, vamos a obtener el conteo sin paginación para verificar
+    // Obtener conteo total
     const countQuery = `
       SELECT COUNT(*) as total
       FROM tickets t
@@ -166,7 +167,7 @@ const getTicket = async (req, res, next) => {
   }
 };
 
-// Crear nuevo boleto
+// Crear nuevo boleto CON EMAILJS
 const createTicket = async (req, res, next) => {
   try {
     const {
@@ -240,25 +241,30 @@ const createTicket = async (req, res, next) => {
 
     const ticket = newTicket[0];
 
-    // Enviar boleto por email (en background)
+    // 🚀 ENVIAR EMAIL CON EMAILJS (en background)
     try {
       await sendTicketEmail(ticket);
+      console.log('✅ Email enviado con EmailJS a:', buyerEmail);
     } catch (emailError) {
-      console.error('Error enviando email:', emailError);
+      console.error('❌ Error enviando email:', emailError);
       // No fallar la creación del boleto por error de email
     }
 
     res.status(201).json({
       success: true,
-      data: ticket,
-      message: 'Boleto creado exitosamente'
+      data: {
+        ...ticket,
+        // Incluir URL del QR para mostrar inmediatamente
+        qr_image_url: `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(ticket.qr_code)}`
+      },
+      message: 'Boleto creado exitosamente. Email enviado a ' + buyerEmail
     });
   } catch (error) {
     next(error);
   }
 };
 
-// Reenviar boleto por email
+// Reenviar boleto por email CON EMAILJS
 const resendTicket = async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -295,8 +301,14 @@ const resendTicket = async (req, res, next) => {
       ticket.buyer_email = email;
     }
 
-    // Enviar boleto
-    await sendTicketEmail(ticket);
+    // 🚀 REENVIAR CON EMAILJS
+    try {
+      await sendTicketEmail(ticket);
+      console.log('✅ Boleto reenviado con EmailJS a:', email);
+    } catch (emailError) {
+      console.error('❌ Error reenviando email:', emailError);
+      throw createError(500, 'EMAIL_ERROR', 'Error enviando el email');
+    }
 
     res.json({
       success: true,
@@ -446,8 +458,8 @@ const cancelTicket = async (req, res, next) => {
 module.exports = {
   getTickets,
   getTicket,
-  createTicket,
-  resendTicket,
+  createTicket,      // ✅ CON EMAILJS
+  resendTicket,      // ✅ CON EMAILJS
   scanTicket,
   markTicketAsUsed,
   cancelTicket
